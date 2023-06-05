@@ -103,7 +103,7 @@ const Navbar = () => {
           <CustomLink href='/projects' title='Projects' className='ml-4' />
         </nav>
 
-        <nav className='flex items-center justify-center flex-wrap'>
+        <nav className='flex items-center justify-center flex-wrap lg:mt-2'>
           <motion.a
             href={'https://twitter.com/HoanLoveEl'}
             target={'_blank'}
@@ -127,14 +127,14 @@ const Navbar = () => {
             target={'_blank'}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className='w-6 ml-3'
+            className='w-6 mx-3'
           >
             <LinkedInIcon />
           </motion.a>
 
           <button
             onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-            className={`ml-3 flex items-center justify-center rounded-full p-1 ${
+            className={`w-6 h-6 ease ml-3 flex items-center justify-center rounded-full p-1 ${
               theme === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'
             }`}
           >
@@ -174,13 +174,13 @@ const Navbar = () => {
             />
           </nav>
 
-          <nav className='flex items-center justify-center flex-wrap mt-2'>
+          <nav className='flex items-center justify-center flex-wrap'>
             <motion.a
               href={'https://twitter.com/HoanLoveEl'}
               target={'_blank'}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className='w-6 mr-3 sm:mx-1'
+              className='w-6 mr-3 sm:mr-1'
             >
               <TwitterIcon />
             </motion.a>
@@ -198,14 +198,14 @@ const Navbar = () => {
               target={'_blank'}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className='w-6 ml-3 sm:mx-1'
+              className='w-6 mx-3 sm:mx-1'
             >
               <LinkedInIcon />
             </motion.a>
 
             <button
               onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-              className={`ml-3 flex items-center justify-center rounded-full p-1 ${
+              className={`w-6 h-6 ease ml-3 flex items-center justify-center rounded-full p-1 sm:ml-1 ${
                 theme === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'
               }`}
             >

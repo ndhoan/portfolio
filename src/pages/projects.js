@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import project1 from '../../public/images/projects/crypto-screener-cover-image.jpg';
+import project1 from '../../public/images/projects/netflix.png';
 import { motion } from 'framer-motion';
 import TransitionEffect from '@/components/TransitionEffect';
 
@@ -129,12 +129,15 @@ const projects = () => {
           <div className='grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0'>
             <div className='col-span-12'>
               <FeaturedProject
-                title='React Portfolio Website'
+                title='Netflix Clone'
                 img={project1}
-                summary='A professional portfolio website using React JS, Framer-motion, and Styled-components. It has smooth 
-                page transitions, cool background effects, unique design and it is mobile responsive'
-                link='/'
-                github='/'
+                summary='Sign in by email & password or via google and github using NextAuth.js
+                Popup to preview and see more info about movie
+                Watch movie
+                Save movies to your favorite lists
+                Support ssr, seo friendly by nextjs'
+                link='https://netflix-clone-ndhoan.vercel.app/'
+                github='https://github.com/ndhoan/netflix-clone'
                 type='Featured Project'
               />
             </div>
