@@ -105,7 +105,7 @@ const Navbar = () => {
 
         <nav className='flex items-center justify-center flex-wrap'>
           <motion.a
-            href={'/'}
+            href={'https://twitter.com/HoanLoveEl'}
             target={'_blank'}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -114,7 +114,7 @@ const Navbar = () => {
             <TwitterIcon />
           </motion.a>
           <motion.a
-            href={'/'}
+            href={'https://github.com/ndhoan'}
             target={'_blank'}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -123,7 +123,7 @@ const Navbar = () => {
             <GithubIcon />
           </motion.a>
           <motion.a
-            href={'/'}
+            href={'https://www.linkedin.com/in/dang-hoan-nguyen-19128aa8/'}
             target={'_blank'}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
@@ -176,7 +176,7 @@ const Navbar = () => {
 
           <nav className='flex items-center justify-center flex-wrap mt-2'>
             <motion.a
-              href={'/'}
+              href={'https://twitter.com/HoanLoveEl'}
               target={'_blank'}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -185,7 +185,7 @@ const Navbar = () => {
               <TwitterIcon />
             </motion.a>
             <motion.a
-              href={'/'}
+              href={'https://github.com/ndhoan'}
               target={'_blank'}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
@@ -194,7 +194,7 @@ const Navbar = () => {
               <GithubIcon />
             </motion.a>
             <motion.a
-              href={'/'}
+              href={'https://www.linkedin.com/in/dang-hoan-nguyen-19128aa8/'}
               target={'_blank'}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
