@@ -5,12 +5,14 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import profilePic from '../../public/images/profile/developer-pic-3.jpg';
+import Skills from '@/components/Skills';
+import Experience from '@/components/Experience';
 
 const AnimatedNumbers = ({ value }) => {
   const numberRef = useRef(null);
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, { duration: 3000 });
-  const isInView = useInView(numberRef);
+  const isInView = useInView(numberRef, { once: true });
 
   useEffect(() => {
     if (isInView) {
@@ -102,6 +104,8 @@ const about = () => {
               </div>
             </div>
           </div>
+          <Skills />
+          <Experience />
         </Layout>
       </main>
     </>
