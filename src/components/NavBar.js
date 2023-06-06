@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
-import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import {
   GithubIcon,
   LinkedInIcon,
@@ -11,6 +10,7 @@ import {
   TwitterIcon,
 } from './Icons';
 import Logo from './Logo';
+import useThemeSwitcher from './hooks/useThemeSwitcher';
 
 const CustomLink = ({ href, title, className = '' }) => {
   const router = useRouter();
@@ -56,22 +56,12 @@ const CustomMobileLink = ({ href, title, className = '', toggle }) => {
 };
 
 const Navbar = () => {
-  const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
+  const [mode, setMode] = useThemeSwitcher();
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
-
-  // useEffect only runs on the client, so now we can safely show the UI
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
 
   return (
     <header className='flex items-center justify-between w-full px-32 py-8 font-medium dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8'>
@@ -133,12 +123,12 @@ const Navbar = () => {
           </motion.a>
 
           <button
-            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+            onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
             className={`w-6 h-6 ease ml-3 flex items-center justify-center rounded-full p-1 ${
-              theme === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'
+              mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'
             }`}
           >
-            {theme === 'dark' ? (
+            {mode === 'dark' ? (
               <SunIcon className={'fill-dark'} />
             ) : (
               <MoonIcon className={'fill-dark'} />
@@ -204,12 +194,12 @@ const Navbar = () => {
             </motion.a>
 
             <button
-              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+              onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}
               className={`w-6 h-6 ease ml-3 flex items-center justify-center rounded-full p-1 sm:ml-1 ${
-                theme === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'
+                mode === 'light' ? 'bg-dark text-light' : 'bg-light text-dark'
               }`}
             >
-              {theme === 'dark' ? (
+              {mode === 'dark' ? (
                 <SunIcon className={'fill-dark'} />
               ) : (
                 <MoonIcon className={'fill-dark'} />

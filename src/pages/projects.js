@@ -168,7 +168,7 @@ const projects = () => {
                 summary='A professional portfolio website using NextJS, Framer-motion, TailwindCSS. It has smooth 
                 page transitions, cool background effects, unique design and it is mobile responsive'
                 link='/'
-                github='/'
+                github='https://github.com/ndhoan/portfolio'
                 type='Featured Project'
               />
             </div>
