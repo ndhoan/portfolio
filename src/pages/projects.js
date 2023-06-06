@@ -1,13 +1,15 @@
 import AnimatedText from '@/components/AnimatedText';
 import { GithubIcon } from '@/components/Icons';
 import Layout from '@/components/Layout';
+import TransitionEffect from '@/components/TransitionEffect';
+import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 import project1 from '../../public/images/projects/netflix.png';
-import { motion } from 'framer-motion';
-import TransitionEffect from '@/components/TransitionEffect';
+import project2 from '../../public/images/projects/fakestore.png';
+import project3 from '../../public/images/projects/weather.png';
+import project4 from '../../public/images/projects/portfolio.png';
 
 const FramerImage = motion(Image);
 
@@ -131,11 +133,8 @@ const projects = () => {
               <FeaturedProject
                 title='Netflix Clone'
                 img={project1}
-                summary='Sign in by email & password or via google and github using NextAuth.js
-                Popup to preview and see more info about movie
-                Watch movie
-                Save movies to your favorite lists
-                Support ssr, seo friendly by nextjs'
+                summary='Netflix clone using Nextjs Typescript, TailwindCSS, Prisma, MongoDB
+                , Zustand. You can sign in by email & password or via google and github. You can watch movie and add to your favorite lists.'
                 link='https://netflix-clone-ndhoan.vercel.app/'
                 github='https://github.com/ndhoan/netflix-clone'
                 type='Featured Project'
@@ -144,29 +143,29 @@ const projects = () => {
             <div className='col-span-6 sm:col-span-12'>
               {' '}
               <Project
-                title='React Portfolio Website'
-                img={project1}
-                link='/'
-                github='/'
-                type='Featured Project'
+                title='Fake Nike Store'
+                img={project2}
+                link='https://fake-nike-store.vercel.app/'
+                github='https://github.com/ndhoan/Fake-Nike-Store'
+                type='Online Store'
               />
             </div>
             <div className='col-span-6 sm:col-span-12'>
               {' '}
               <Project
-                title='React Portfolio Website'
-                img={project1}
-                link='/'
-                github='/'
-                type='Featured Project'
+                title='Weather Now'
+                img={project3}
+                link='https://weather-app-p4sa.vercel.app/'
+                github='https://github.com/ndhoan/weather-app'
+                type='Weather Forecast'
               />
             </div>
             <div className='col-span-12'>
               {' '}
               <FeaturedProject
-                title='React Portfolio Website'
-                img={project1}
-                summary='A professional portfolio website using React JS, Framer-motion, and Styled-components. It has smooth 
+                title='Portfolio Website'
+                img={project4}
+                summary='A professional portfolio website using NextJS, Framer-motion, TailwindCSS. It has smooth 
                 page transitions, cool background effects, unique design and it is mobile responsive'
                 link='/'
                 github='/'
